@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+#one p {
+  font-size: 30px;
+}
+
+#two p {
+  font-size: 25px;
+}
+#two {
+  position: relative;
+  height: 800px;
+}
+.work {
+
+  position: absolute;
+  top:600px;
+left: 160px;
+
+}
+.info {
+  margin-top: 400px;
+}
+
+
+
+#sign form {
+  margin: auto;
+}
+#image h1 {
+  margin-top: 150px;
+}
+.hover a:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+}
+
+.card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+footer a :hover {
+  color: #0d6efd !important;
+}
+
+@media (max-width:775.98px) {
+  .work {
+
+    position: absolute;
+    top:530px;
+
+
+  }
+  .info{
+    margin-top: 720px;
+  }
+  .grid{
+    display: grid;
+
+  }
+  footer{
+    text-align: center;
+
+  }
+  .social{
+    margin:auto
+  }
+
+}
+

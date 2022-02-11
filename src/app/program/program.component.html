@@ -1,0 +1,61 @@
+<section>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-5">
+             <div class="hover list-group ">
+                 <h3 class="fs-3 text-secondary px-3">
+                     التخصصات
+                 </h3>
+                 <a href="#language" class="list-group-item p-3 list-group-item-action "
+                 (click)="onSelected('lang')"
+                 >
+                     اللغات والآداب
+                 </a>
+                 <a href="#computer" class="list-group-item px-3 py-3 list-group-item-action"
+                 (click)="onSelected('computer')"
+                 >العلوم والتكنولوجيا </a>
+                 <!-- <a href="#" class="list-group-item py-3 list-group-item-action">الأعمال والريادة</a> -->
+                 <a href="#yothymath" class="list-group-item py-3 list-group-item-action"
+                 (click)="onSelected('usy-math')"
+                 >الحساب الذهني</a>
+                 <a href="#kids" class="list-group-item p-3 list-group-item-action "
+                 (click)="onSelected('kids')"
+                 >الرسم و تنمية المهارات</a>
+                 <a href="#kids" class="list-group-item p-3 list-group-item-action "
+                 (click)="onSelected('qraan')"
+                 >القرآن الكريم</a>
+                 <!-- <a href="#kids" class="list-group-item p-3 list-group-item-action " >الاطفال</a> -->
+               </div>
+          </div>
+<div  class="col-md-7 ">
+<app-lang *ngIf="programSelected === 'lang'"  (progSelect)="onNavi($event)"></app-lang>
+<app-computer *ngIf="programSelected === 'computer'" (progSelect)="onNavi($event)"
+ ></app-computer>
+<app-usy-mathm *ngIf="programSelected === 'usy-math'" (progSelect)="onNavi($event)"></app-usy-mathm>
+<app-program-details *ngIf="programSelected === 'kids'" (progSelect)="onNavi($event)"></app-program-details>
+<app-qraan *ngIf="programSelected === 'qraan'"  (progSelect)="onNavi($event)"></app-qraan>
+
+</div>
+</div>
+</div>
+
+          </section>
+
+
+
+
+
+          <app-usy-math *ngIf="progSelect==='usy'"></app-usy-math>
+          <app-vedic-math *ngIf="progSelect ==='vedic'"></app-vedic-math>
+<app-english-basics *ngIf="progSelect==='english-basics'"></app-english-basics>
+<app-english-convarsation *ngIf="progSelect==='english-conv'"></app-english-convarsation>
+<app-arabic-basics *ngIf="progSelect==='arabic-basics'"></app-arabic-basics>
+<app-arabic-font *ngIf="progSelect==='arabic-font'"></app-arabic-font>
+<app-basics *ngIf="progSelect==='basic'"></app-basics>
+<app-office *ngIf="progSelect==='microsoft'"></app-office>
+<app-internet *ngIf="progSelect==='internet'"></app-internet>
+<app-html *ngIf="progSelect==='html'"></app-html>
+<app-kids *ngIf="progSelect==='draw'"></app-kids>
+<app-skills *ngIf="progSelect==='skills'"></app-skills>
+<app-qraan-learning *ngIf="progSelect==='qraan-learning'"></app-qraan-learning>
+<app-coding *ngIf="progSelect==='coding'"></app-coding>

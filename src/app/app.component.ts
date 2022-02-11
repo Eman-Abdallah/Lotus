@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lotus-acaddmy';
+
+  loadedFeature = 'home'
+  loadFeature = ''
+  onNavigate(feature:string){
+this.loadedFeature=feature
+this.loadFeature = ''
+
+
+  }
+  onNav(feature:string){
+this.loadFeature = feature
+this.loadedFeature = ''
+  }
 }
