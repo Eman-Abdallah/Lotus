@@ -1,0 +1,8 @@
+form{
+  width: 50%;
+}
+@media  (max-width: 568px){
+  form{
+    width: 75%;
+  }
+}

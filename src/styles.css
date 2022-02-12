@@ -13,20 +13,6 @@ overflow-x: hidden;
 #two p {
   font-size: 25px;
 }
-#two {
-  position: relative;
-  height: 800px;
-}
-.work {
-
-  position: absolute;
-  top:600px;
-left: 160px;
-
-}
-.info {
-  margin-top: 400px;
-}
 
 
 
@@ -65,28 +51,53 @@ footer a :hover {
   color: #0d6efd !important;
 }
 
-@media (max-width:775.98px) {
-  .work {
-
-    position: absolute;
-    top:530px;
-
-
+@media  (max-width: 768px){
+  body{
+    overflow-x: hidden;
   }
-  .info{
-    margin-top: 720px;
-  }
-  .grid{
-    display: grid;
+  .navbar .image{
+    width: 60px;
+    height: 60px;
+    padding-bottom:100px;
+      }
+.top{
+  margin-top: 50px;
+}
+.work{
+margin: 20px;
+  padding: 30px;
+}
+.info{
+  margin-right: 20px;
+}
+#three{
+  text-align: center;
+}
+.grid{
+  display: grid;
+}
+#five{
+  margin-right: 20px;
+}
+footer h3{
+  text-align: center;
+}
+footer .social{
+  justify-content: space-between;
+}
+footer .social i{
+width: 30px;
 
-  }
-  footer{
-    text-align: center;
-
-  }
-  .social{
-    margin:auto
-  }
 
 }
+footer .team{
+ justify-content: center;
+}
+.hover{
+  margin-right: 20px;
+}
+  }
+
+
+
 

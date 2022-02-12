@@ -67,3 +67,18 @@
    transition-delay: 0.2s;
 
 }
+@media  (max-width: 768px){
+  body{
+    overflow-x: hidden;
+    padding: 0;
+  }
+  .card {
+    max-width :200px;
+    height : 215px;
+  }
+  .card .image img {
+    width : 200px;
+    height:215px;
+    border-radius : 15px;
+  }
+}
