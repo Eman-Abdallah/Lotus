@@ -1,59 +1,60 @@
-<section id="language"  class="mt-5" >
+<section   class="mt-5" >
   <div class="container">
      <h3 class="fs-2  btn btn-outline-primary rounded-pill  mx-auto my-3 ">
          اللغات والآداب
       </h3>
-     <div class="row mx-5">
-         <div class="col mb-2">
+     <div class="row ">
+         <div class="col-md-3 mb-2">
            <div class="card mb-2" style="width: 14rem; ">
                <img src="/assets/img/English Basics.png"style="height: 200px;"  class="card-img-top" alt="...">
                <div class="card-body px-3">
                  <h5 class="card-title ">اساسيات الانجليزي </h5>
                  <p class="card-text"> الاساسيات تتضمن كل ما تحتاج اليه من اجل انطلاقة قوية فقد اخترنا لك دروس تحتاج اليها بشكل دائم وسوف تستخدم اغلب مفرداتها بشكل يومي ومتكرر . وهذه الدروس هي الحجر الاساس لتعلم اللغة الانجليزية .</p>
-                 <a href="#" class="btn btn-primary mt-3" (click)="onClick('english-basics')" >الدورة</a>
+                 <a routerLink="english-basics"  class="btn btn-primary mt-3"  >الدورة</a>
                </div>
              </div>
          </div>
 
 
 
-         <div class="col">
+         <div class="col-md-3">
            <div class="card" style="width: 14rem;">
                <img src="/assets/img/Basic-English-Conversation-100-Daily-Topics-01.jpg" style="height: 200px;" class="card-img-top" alt="...">
               <div class="card-body px-3">
                  <h5 class="card-title">المحادثة بالانجليزي
                  </h5>
                  <p class="card-text ">تُعد المحادثة من أهم جوانب تعلم اللغة الإنجليزية، لأنها تعتبر مقياس تحسنك في اللغة الإنجليزية. فكلما زاد مستوي تحدث الإنجليزية، كلما زاد باقي جوانب اللغة.  </p>
-                 <a href="#" class="btn btn-primary mt-5"  (click)="onClick('english-conv')">الدورة</a>
+                 <a routerLink="english-conv" class="btn btn-primary mt-5"  >الدورة</a>
                </div>
              </div>
          </div>
 
 
-         <div class="col">
+         <div class="col-md-3 ">
              <div class="card" style="width: 14rem;">
                  <img src="/assets/img/صورة_دورة_قواعد_اللغة_العربية_أفقية.jpg" style="height: 200px;" class="card-img-top" alt="...">
                 <div class="card-body px-3">
                    <h5 class="card-title">قواعد اللغة العربية </h5>
                    <p class="card-text"> هذا المساق يقدّم لكم أهمّ أساسيات قواعد النّحو والإملاء بشكل مبسّط وبصورة منظّمة مع أمثلة وتطبيقات عمليّة. ويشمل نوعين من القواعد: قواعد النّحو والإملاء. </p>
-                   <a href="#" class="btn btn-primary my-4" (click)="onClick('arabic-basics')">الدورة</a>
+                   <a routerLink="arabic-basics"  class="btn btn-primary my-4" >الدورة</a>
                  </div>
                </div>
            </div>
 
 
-           <div class="col">
+           <div class="col-md-3 ">
              <div class="card" style="width: 14rem;">
                  <img src="/assets/img/Learning-Arabic.jpg" style="height: 200px;" class="card-img-top" alt="...">
                 <div class="card-body px-3">
                    <h5 class="card-title">الخط العربي </h5>
                    <p class="card-text"> الخط العربي هو فن وتصميم الكتابة في مختلف اللغات التي تستعمل الحروف العربية. تتميز الكتابة العربية بكونها متصلة مما يجعلها قابلة لاكتساب أشكال هندسية مختلفة من خلال المد والرجع والاستدارة والتزوية والتشابك والتداخل والتركيب.  </p>
-                   <a href="#" class="btn btn-primary"(click)="onClick('arabic-font')" >الدورة</a>
+                   <a routerLink="arabic-font" class="btn btn-primary" >الدورة</a>
                  </div>
                </div>
            </div>
 
       </div>
   </div>
-
+  <router-outlet></router-outlet>
 </section>
+

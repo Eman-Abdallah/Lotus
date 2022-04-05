@@ -50,6 +50,7 @@ body {
 .imgBox img {
   width: 18rem;
   height: 18rem;
+  border-radius: 5%;
 
 }
 
@@ -81,15 +82,18 @@ body {
 .content span {
   color: #555;
   font-size: .8rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 2px;
 }
 
 @media (max-width: 600px) {
   .container .box:hover .content {
-    transform: translate(0, 3.5rem);
+
+    transform: translate(0.5rem,4.3rem);
   }
   .container .box:hover .imgBox {
-    transform: translate(0, -3.5rem);
+    transform: translate(0.5rem, -4.3rem);
   }
+
+
 }

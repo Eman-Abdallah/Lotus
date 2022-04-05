@@ -6,6 +6,7 @@
                       اطمح، تعلّم، تقدّم
                   </h1>
                   <p class="fs-2 mt-2">قم ببناء مهاراتك العمليّة من خلال الالتحاق ببرامج تدريبيّة متطوّرة، واكتسب شهادات تساعدك للدخول في سوق العمل وتطوير مسيرتك المهنية.</p>
+                  <a routerLink="../program"  class="btn btn-primary btn-lg rounded-pill">اكتشف البرامج</a>
 
           </div>
 
@@ -85,9 +86,9 @@
     </div>
 </div>
 
-<div class="container2 col-md-12">
+<div class="container2  row p-0">
 
-        <div class="info bg-warning pt-2 px-5 text-center pb-3   " style="height: fit-content">
+        <div class="col-xs-12 bg-warning pt-2 px-5 text-center pb-3  " style="height: fit-content">
 <h2  class="pt-5  fs-1">
 
 اصقل مهاراتك العمليّة مع تخصّصات اللوتس اكاديمي
@@ -110,16 +111,16 @@
               اختر من أحد هذه الدورات لتطوير مهاراتك في مجالات مختلفة
             </p>
             <div class="grid">
-              <a class="btn btn-outline-primary rounded-pill p-3 m-2 "  href="#yothymath "
+              <a class="btn btn-outline-primary rounded-pill p-3 m-2 "
               (click)="onclicked('usy')"
                           >الحساب الذهني</a>
-                          <a class="btn btn-outline-primary rounded-pill p-3 m-2" href="#computer"
+                          <a class="btn btn-outline-primary rounded-pill p-3 m-2"
                           (click)="onclicked('comp')"
                           >اساسيات الحاسب الالي</a>
-                          <a class="btn btn-outline-primary rounded-pill p-3 m-2" href="#computer"
+                          <a class="btn btn-outline-primary rounded-pill p-3 m-2"
                           (click)="onclicked('web')"
                           >تطوير الويب</a>
-                          <a class="btn btn-outline-primary rounded-pill p-3 m-2" href="#english"
+                          <a class="btn btn-outline-primary rounded-pill p-3 m-2"
                           (click)="onclicked('lang')"
                           >اللغات</a>
             </div>
@@ -314,7 +315,7 @@
     </div>
 </section>
 
-  <section id="english" class="mt-5 "
+  <section id="lang" class="mt-5 "
   *ngIf="programSelect==='lang'"
   >
     <div class="collapse2">

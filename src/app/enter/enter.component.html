@@ -3,9 +3,9 @@
       <h2 class="mt-5 text-center fs-1 text-secondary" >سجل الدخول لحسابك</h2>
       <div class="d-flex justify-content-center">
           <p class="lead">هل لديك حساب لدينا ؟</p>
-          <a href="/sign-in.html" class="btn text-primary ">انشئ حسابك </a>
+          <a routerLink="/sign" class="btn text-primary ">انشئ حسابك </a>
       </div>
-
+<router-outlet></router-outlet>
       <div class="d-flex justify-content-center">
           <a href="https://accounts.google.com/" target="blank" class="btn border px-5 py-4 mx-4 bg-light">
               <i class="fab fa-google fa-2x mx-2  text-primary"></i>عن طريق جوحل
@@ -16,13 +16,16 @@
       </div>
       <h3 class="text-center my-3">او</h3>
 
-      <form action="" class=" m-auto"
+      <form [formGroup]=" signInForm" class=" m-auto" (ngSubmit)=" onlogin()"
      >
+
+     <div class="alert alert-danger my-2" *ngIf="error">{{error}}</div>
         <div class="content">
           <div class="form-group   ">
               <label for="email" class="fs-4 mx-2  text-secondary">البريد الالكتروني</label>
 
-              <input type="email" class="form-control  py-3" placeholder="Please Enter Your Email">
+              <input type="email" class="form-control  py-3" placeholder="Please Enter Your Email"
+              formControlName="email">
 
           </div>
 
@@ -32,13 +35,13 @@
           <div class="form-group mt-4   ">
               <label for="password" class="fs-4 mx-3  text-secondary">كلمة السر </label>
 
-              <input type="password" class="form-control  py-3" placeholder="Please Enter Your Password">
+              <input type="password" class="form-control  py-3" placeholder="Please Enter Your Password"  formControlName="password">
               <a class="text-primary mt-2 btn fs-5">هل نسيت كلمة السر؟</a>
           </div>
 
 
             <div class="d-grid my-5 ">
-              <button class="btn btn-primary p-3 "> سجل الان</button>
+              <button class="btn btn-primary p-3 " type="submit"> تسجيل الدخول</button>
             </div>
         </div>
 

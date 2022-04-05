@@ -7,12 +7,12 @@
 </h3>
 <div class="row mx-5">
 <div class="col mb-2">
-<div class="card" style="width: 14rem;">
+<div class="card" style="width: 25rem;">
 <img src="/assets/img/img-20160916-57dbdf3458e2a.jpg"style="height: 200px;"  class="card-img-top" alt="...">
 <div class="card-body px-3">
 <h5 class="card-title ">اساسيات الرسم </h5>
 <p class="card-text my-3"> ممارسة المهارات اليدوية كالرسم  تساعد بشكل كبير في تطوير حركة الأصابع للطفل ، وكل المفاصل التي يتم استخدامها في حركة الأقلام والرسم </p>
-<a href="#" class="btn btn-primary my-4"  (click)="onClick('draw')">الدورة</a>
+<a routerLink="drawing" class="btn btn-primary my-4" >الدورة</a>
 </div>
 </div>
 </div>
@@ -20,17 +20,17 @@
 
 
 <div class="col">
-<div class="card" style="width:14rem;">
+<div class="card" style="width:25rem;">
 <img src="/assets/img/41Ak6Uot97L._AC_SY1000_.jpg" style="height: 200px;" class="card-img-top" alt="...">
 <div class="card-body px-3">
 <h5 class="card-title">تنمية مهارات
 </h5>
 <p class="card-text my-1 ">تنمية المهارات تساعده على تطوير مهارات تعامله مع الآخرين والتواصل معهم، والتمكن من التعرف في سن مبكرة على اهتماماته وميوله، الأمر الذي يختصر كثير من الوقت في معرفة المجالات التي يمكنه النجاح بها مستقبلاً. </p>
-<a href="#" class="btn btn-primary "  (click)="onClick('skills')">الدورة</a>
+<a routerLink="skill" class="btn btn-primary "  >الدورة</a>
 </div>
 </div>
 </div>
-
+<router-outlet></router-outlet>
 
 </div>
 </div>

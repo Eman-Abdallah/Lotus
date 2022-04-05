@@ -1,3 +1,5 @@
+import { FormGroup, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
+  form= new FormGroup({
+    email:new FormControl(''),
+    subject:new FormControl(''),
+    disc: new FormControl('')
+  })
+onsubmit(){
+  const messages= this.form.getRawValue()
+  this.http.post('https://lotus-acadmey-default-rtdb.firebaseio.com/messages.json',messages).subscribe()
+  this.form.reset()
 
+}
 }

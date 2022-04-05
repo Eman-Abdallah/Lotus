@@ -29,6 +29,9 @@ import { SkillsComponent } from './program/program-details/skills/skills.compone
 import { QraanComponent } from './program/qraan/qraan.component';
 import { QraanLearningComponent } from './program/qraan/qraan-learning/qraan-learning.component';
 import { CodingComponent } from './program/computer/coding/coding.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -62,11 +65,15 @@ import { CodingComponent } from './program/computer/coding/coding.component';
     QraanComponent,
     QraanLearningComponent,
     CodingComponent,
+    
 
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

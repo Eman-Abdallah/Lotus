@@ -1,21 +1,16 @@
 
-<app-header (featureCreated)="onNavigate($event)" ></app-header>
+<app-header ></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+</div>
 
 
-<app-home *ngIf="loadedFeature ==='home'"></app-home>
-<app-program *ngIf="loadedFeature ==='program'"> </app-program>
 
-
-
-
-
-<app-sign-in  *ngIf="loadedFeature ==='sign'" >
-</app-sign-in>
-<app-enter  *ngIf="loadedFeature ==='enter'" ></app-enter>
-<app-contact-us *ngIf="loadFeature ==='contact'"></app-contact-us>
-<app-team *ngIf="loadFeature ==='team'"></app-team>
-
-
-<app-footer (featureCreat)="onNav($event)"></app-footer>
-
-
+<app-footer ></app-footer>

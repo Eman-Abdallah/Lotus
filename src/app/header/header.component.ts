@@ -1,4 +1,7 @@
+import { AuthService } from './../auth.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -7,12 +10,33 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- @Output() featureCreated = new EventEmitter<string>()
-  constructor() { }
+  userName!: string;
+  isAuthenticated=false
+  islogin=false
+  authSub: Subscription = new Subscription;
+  constructor(private http:HttpClient,
+    private auth:AuthService) { }
 
   ngOnInit(): void {
-  }
-  onselect(feature:string){
-  this.featureCreated.emit(feature)
-}
+
+
+    this.authSub= this.auth.subject.subscribe(user=>{
+      // this.isAuthenticated = !user ? true : false
+      if(user._token ===""||user._token==null){
+        this.isAuthenticated=false;
+      }else{
+        this.isAuthenticated=true;
+        this.islogin=true
+
+
+      }
+
+          })
+       
+        }
+
+        onlogOut(){
+          this.auth.logOut()
+          this.islogin=false
+        }
 }

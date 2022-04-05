@@ -1,40 +1,39 @@
 <section>
-  <div class="container-fluid">
-      <div class="row">
+  <div class="container-fluid px-0">
+      <div class="row my-4">
           <div class="col-md-5">
-             <div class="hover list-group ">
+             <div class=" list-group ">
                  <h3 class="fs-3 text-secondary px-3">
                      التخصصات
                  </h3>
-                 <a href="#language" class="list-group-item p-3 list-group-item-action "
-                 (click)="onSelected('lang')"
+                 <a [routerLink]="['lang']" routerLinkActive="active" class="list-group-item p-3 clearfix "
+
                  >
                      اللغات والآداب
                  </a>
-                 <a href="#computer" class="list-group-item px-3 py-3 list-group-item-action"
-                 (click)="onSelected('computer')"
+                 <a routerLink="computer" routerLinkActive="active" class="list-group-item px-3 py-3 clearfix"
+
                  >العلوم والتكنولوجيا </a>
-                 <!-- <a href="#" class="list-group-item py-3 list-group-item-action">الأعمال والريادة</a> -->
-                 <a href="#yothymath" class="list-group-item py-3 list-group-item-action"
-                 (click)="onSelected('usy-math')"
+                 <!-- <a href="#" class="list-group-item py-3 clearfix">الأعمال والريادة</a> -->
+                 <a routerLink="./usy-math" routerLinkActive="active" class="list-group-item py-3 clearfix"
+
                  >الحساب الذهني</a>
-                 <a href="#kids" class="list-group-item p-3 list-group-item-action "
-                 (click)="onSelected('kids')"
+                 <a routerLink="skills" routerLinkActive="active" class="list-group-item p-3 clearfix "
+
                  >الرسم و تنمية المهارات</a>
-                 <a href="#kids" class="list-group-item p-3 list-group-item-action "
-                 (click)="onSelected('qraan')"
+                <a routerLink="quran" routerLinkActive="active"  class="list-group-item p-3 clearfix "
+
                  >القرآن الكريم</a>
-                 <!-- <a href="#kids" class="list-group-item p-3 list-group-item-action " >الاطفال</a> -->
+                 <!-- <a href="#kids" class="list-group-item p-3 clearfix " >الاطفال</a> -->
                </div>
           </div>
-<div  class="col-md-7 ">
-<app-lang *ngIf="programSelected === 'lang'"  (progSelect)="onNavi($event)"></app-lang>
-<app-computer *ngIf="programSelected === 'computer'" (progSelect)="onNavi($event)"
- ></app-computer>
-<app-usy-mathm *ngIf="programSelected === 'usy-math'" (progSelect)="onNavi($event)"></app-usy-mathm>
-<app-program-details *ngIf="programSelected === 'kids'" (progSelect)="onNavi($event)"></app-program-details>
-<app-qraan *ngIf="programSelected === 'qraan'"  (progSelect)="onNavi($event)"></app-qraan>
 
+          <div class="col-md-5">
+
+            <video width="700" height="400" controls >
+              <source src="/assets/vidio/VID-20220211-WA0001.mp4" type="video/mp4">
+
+            </video>
 </div>
 </div>
 </div>
@@ -43,9 +42,9 @@
 
 
 
+          <router-outlet></router-outlet>
 
-
-          <app-usy-math *ngIf="progSelect==='usy'"></app-usy-math>
+          <!-- <app-usy-math *ngIf="progSelect==='usy'"></app-usy-math>
           <app-vedic-math *ngIf="progSelect ==='vedic'"></app-vedic-math>
 <app-english-basics *ngIf="progSelect==='english-basics'"></app-english-basics>
 <app-english-convarsation *ngIf="progSelect==='english-conv'"></app-english-convarsation>
@@ -58,4 +57,4 @@
 <app-kids *ngIf="progSelect==='draw'"></app-kids>
 <app-skills *ngIf="progSelect==='skills'"></app-skills>
 <app-qraan-learning *ngIf="progSelect==='qraan-learning'"></app-qraan-learning>
-<app-coding *ngIf="progSelect==='coding'"></app-coding>
+<app-coding *ngIf="progSelect==='coding'"></app-coding> -->

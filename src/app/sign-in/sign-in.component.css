@@ -6,3 +6,8 @@ form{
     width: 75%;
   }
 }
+
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
