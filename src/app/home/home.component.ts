@@ -6,13 +6,15 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  programSelect = ""
+  programSelect = "usy";
   constructor() { }
 
   ngOnInit(): void {
   }
 onclicked(feature:string){
-this.programSelect = feature
-
+this.programSelect = feature;
+if(document.getElementById(feature)){
+  document.getElementById(feature)?.classList.add('active');
+}
 }
 }
